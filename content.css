@@ -1,0 +1,27 @@
+#tch-heatmap-root { box-sizing: border-box; height: 34px; pointer-events: none; position: absolute; z-index: 9; }
+#tch-heatmap-root[hidden] { display: none !important; }
+#tch-heatmap-root canvas { display: block; height: 100%; width: 100%; }
+#tch-heatmap-root .tch-status {
+  align-items: center; background: rgba(14, 14, 16, 0.84); border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 3px; bottom: 3px; color: #efeff1; display: flex;
+  font: 600 9px/1 Inter, Roobert, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  height: 16px; letter-spacing: 0.02em; max-width: 210px; overflow: hidden; padding: 0 5px;
+  position: absolute; right: 3px; z-index: 3; text-overflow: ellipsis; transition: opacity 300ms ease; white-space: nowrap;
+}
+#tch-heatmap-root .tch-status-ready { opacity: 0; transition-delay: 2.5s; }
+#tch-heatmap-root .tch-status-error { border-color: rgba(255, 117, 117, 0.55); color: #ffb3b3; }
+
+#tch-heatmap-root .tch-peak-buttons { inset: 0; pointer-events: none; position: absolute; z-index: 2; }
+#tch-heatmap-root .tch-peak-button {
+  appearance: none; background: #9147ff; border: 1px solid #ffffff; border-radius: 50%; color: #ffffff;
+  align-items: center; cursor: pointer; display: flex; font: 700 8px/1 Inter, Roobert, "Helvetica Neue", Arial, sans-serif; height: 14px;
+  justify-content: center; margin: 0; padding: 0; pointer-events: auto; position: absolute; top: 0; transform: translateX(-50%);
+  transition: background 120ms ease, transform 120ms ease; width: 14px;
+}
+#tch-heatmap-root .tch-peak-button:hover { background: #bf94ff; transform: translateX(-50%) scale(1.18); }
+#tch-heatmap-root .tch-peak-button:focus-visible { outline: 2px solid #ffffff; outline-offset: 2px; }
+#tch-heatmap-root.tch-platform-kick .tch-peak-button { background: #53fc18; border-color: #eaffdf; color: #071006; }
+#tch-heatmap-root.tch-platform-kick .tch-peak-button:hover { background: #8dff66; }
+#tch-heatmap-root.tch-platform-kick .tch-peak-button { pointer-events: none; }
+#tch-heatmap-root.tch-platform-kick .tch-peak-button.tch-hit-hover { background: #8dff66; transform: translateX(-50%) scale(1.18); }
+
