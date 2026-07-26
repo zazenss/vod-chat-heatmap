@@ -1,53 +1,62 @@
 {
-    "manifest_version":  3,
-    "name":  "Twitch \u0026 Kick Chat Heatmap",
-    "version":  "0.11.2",
-    "description":  "Adds a real chat-activity heatmap to Twitch and Kick VOD timelines.",
-    "permissions":  [
-                        "storage"
-                    ],
-    "host_permissions":  [
-                             "https://www.twitch.tv/*",
-                             "https://gql.twitch.tv/*",
-                             "https://kick.com/*",
-                             "https://www.kick.com/*",
-                             "https://web.kick.com/*"
-                         ],
-    "background":  {
-                       "service_worker":  "background.js"
-                   },
-    "action":  {
-                   "default_title":  "Twitch \u0026 Kick Chat Heatmap",
-                   "default_popup":  "popup.html"
-               },
-    "content_scripts":  [
-                            {
-                                "matches":  [
-                                                "https://kick.com/*",
-                                                "https://www.kick.com/*"
-                                            ],
-                                "js":  [
-                                           "kick-page-bridge.js"
-                                       ],
-                                "run_at":  "document_start",
-                                "world":  "MAIN"
-                            },
-                            {
-                                "matches":  [
-                                                "https://www.twitch.tv/*",
-                                                "https://kick.com/*",
-                                                "https://www.kick.com/*"
-                                            ],
-                                "js":  [
-                                           "heatmap-model.js",
-                                           "kick-adapter.js",
-                                           "content.js"
-                                       ],
-                                "css":  [
-                                            "content.css"
-                                        ],
-                                "run_at":  "document_idle"
-                            }
-                        ]
+  "manifest_version": 3,
+  "name": "Twitch & Kick Chat Heatmap",
+  "version": "0.11.2",
+  "description": "Adds a real chat-activity heatmap to Twitch and Kick VOD timelines.",
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "https://www.twitch.tv/*",
+    "https://gql.twitch.tv/*",
+    "https://kick.com/*",
+    "https://www.kick.com/*",
+    "https://web.kick.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Twitch & Kick Chat Heatmap",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://kick.com/*",
+        "https://www.kick.com/*"
+      ],
+      "js": [
+        "kick-page-bridge.js"
+      ],
+      "run_at": "document_start",
+      "world": "MAIN"
+    },
+    {
+      "matches": [
+        "https://www.twitch.tv/*",
+        "https://kick.com/*",
+        "https://www.kick.com/*"
+      ],
+      "js": [
+        "heatmap-model.js",
+        "kick-adapter.js",
+        "content.js"
+      ],
+      "css": [
+        "content.css"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
 }
-
