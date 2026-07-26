@@ -7,6 +7,20 @@ This Chrome Manifest V3 extension adds a YouTube-style chat-activity waveform ab
 
 It samples replayed chat across the VOD, measures message density, ranks the ten fastest distinct moments, and caches the normalized waveform locally. Numbered buttons 1–10 mark those moments. Clicking a number starts playback five seconds before its exact peak so you can see the buildup.
 
+## Examples
+
+### Top 10 chat moments
+
+![Chat heatmap with numbered markers for the ten fastest chat moments](assets/chat-heatmap-top-moments.png)
+
+The completed heatmap ranks the ten fastest distinct chat moments. Clicking a numbered marker starts playback five seconds before that moment so you can see the buildup.
+
+### Kick VOD analysis
+
+![Kick player showing chat analysis progress](assets/kick-analysis-progress.png)
+
+Kick VODs display analysis progress directly above the player controls while chat activity is being sampled.
+
 ## Load or update it in Chrome
 
 1. Open `chrome://extensions`.
