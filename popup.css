@@ -1,0 +1,10 @@
+:root { color-scheme: dark; font-family: Inter, Roobert, "Helvetica Neue", Helvetica, Arial, sans-serif; }
+body { background: #18181b; color: #efeff1; margin: 0; min-width: 270px; }
+main { padding: 16px; } h1 { font-size: 17px; margin: 0 0 4px; }
+.status { color: #adadb8; font-size: 12px; margin: 0 0 18px; }
+label { display: grid; font-size: 13px; gap: 7px; grid-template-columns: 1fr auto; margin-top: 15px; }
+input[type="range"] { accent-color: #9147ff; grid-column: 1 / -1; width: 100%; }
+.toggle-row { align-items: center; border-bottom: 1px solid #303034; display: flex; justify-content: space-between; margin: 0; padding-bottom: 15px; }
+.toggle-row input { accent-color: #9147ff; height: 18px; width: 18px; }
+output { color: #adadb8; font-size: 12px; }
+
